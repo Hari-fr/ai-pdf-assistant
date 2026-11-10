@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* Base Dark Canvas */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #06070a;
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glassmorphism Surface */
+.glass-panel {
+  background: rgba(14, 19, 31, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border-radius: 1.25rem;
+}
+
+.glass-panel-subtle {
+  background: rgba(18, 24, 38, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1rem;
+}
+
+/* Glowing Primary Button */
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+  color: #ffffff;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(124, 58, 237, 0.5);
+  filter: brightness(1.1);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Quick Prompt Pill */
+.prompt-chip {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  color: #cbd5e1;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prompt-chip:hover:not(:disabled) {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #e0e7ff;
+  transform: translateX(4px);
+  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.15);
+}
+
+/* Chat Bubbles */
+.chat-bubble-user {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: #ffffff;
+  border-radius: 1.25rem 1.25rem 0.25rem 1.25rem;
+  padding: 0.875rem 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.25);
+}
+
+.chat-bubble-bot {
+  background: rgba(22, 29, 45, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #e2e8f0;
+  border-radius: 1.25rem 1.25rem 1.25rem 0.25rem;
+  padding: 0.875rem 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom Sleek Dark Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.2);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}
+
+/* Dynamic Ambient Floating Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-18px) scale(1.05); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(18px) scale(0.95); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(-12px, -10px) scale(1.03); }
+}
+
+.animate-float-1 {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatReverse 10s ease-in-out infinite;
+}
+
+.animate-float-3 {
+  animation: floatGentle 12s ease-in-out infinite;
+}
+
+/* Entrance Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Wave Bouncing Dots for Thinking Indicator */
+@keyframes bounceWave {
+  0%, 80%, 100% { 
+    transform: translateY(0); 
+    opacity: 0.5;
+  }
+  40% { 
+    transform: translateY(-7px); 
+    opacity: 1;
+  }
+}
+
+.wave-dot-1 {
+  animation: bounceWave 1.2s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.wave-dot-2 {
+  animation: bounceWave 1.2s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.wave-dot-3 {
+  animation: bounceWave 1.2s ease-in-out infinite;
+  animation-delay: 0.4s;
+}

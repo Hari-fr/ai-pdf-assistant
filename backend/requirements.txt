@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pdfplumber
+pdf2image
+pillow
+sentence-transformers
+chromadb
+requests
+python-multipart

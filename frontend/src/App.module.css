@@ -1,0 +1,49 @@
+.container {
+  background: linear-gradient(135deg, #1e1b4b 0%, #7c3aed 50%, #be185d 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.floatingOrb1 {
+  position: absolute;
+  top: -10rem;
+  right: -10rem;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(139, 69, 19, 0.7);
+  border-radius: 50%;
+  filter: blur(64px);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.floatingOrb2 {
+  position: absolute;
+  bottom: -10rem;
+  left: -10rem;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(236, 72, 153, 0.7);
+  border-radius: 50%;
+  filter: blur(64px);
+  animation: pulse 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.floatingOrb3 {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(59, 130, 246, 0.7);
+  border-radius: 50%;
+  filter: blur(64px);
+  animation: pulse 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 0.9; }
+}

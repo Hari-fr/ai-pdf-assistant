@@ -1,0 +1,45 @@
+
+🔧 Frontend Tech Stack Summary for Report
+
+1. Framework & Build Tools:
+
+   * React: JavaScript library for building user interfaces (used to develop the frontend components).
+   * Vite: Next-generation frontend build tool (used for faster development and bundling).
+
+2. Styling:
+
+   * Tailwind CSS: Utility-first CSS framework for styling UI elements.
+   * PostCSS: Used under the hood by Tailwind for transforming CSS with JavaScript plugins.
+   * Autoprefixer: Adds vendor prefixes to CSS for cross-browser compatibility.
+
+3. Language & Configuration:
+
+   * TypeScript (via .tsx): Superset of JavaScript providing static typing.
+   * tsconfig.json: TypeScript compiler configuration.
+   * tailwind.config.js: Tailwind's custom configuration file.
+   * postcss.config.cjs: PostCSS configuration file (in CommonJS format to work with Vite).
+
+4. Packages (installed via npm):
+
+   * axios: For making HTTP requests to your FastAPI backend (/upload-pdf/ and /ask endpoints).
+   * react, react-dom: React runtime and DOM rendering.
+   * vite: Development server and bundler.
+   * tailwindcss, postcss, autoprefixer: Styling tools.
+   * @types/react and @types/react-dom: TypeScript type definitions.
+
+5. Project Structure:
+
+   * src/
+
+     * App.tsx – main component containing the upload interface and chat interface.
+     * main.tsx – React entry point.
+     * index.css – Tailwind’s base CSS imports.
+
+6. UI Features You Added:
+
+   * Stylish gradient background using Tailwind.
+   * Floating styled buttons and bubble-style chat UI.
+   * Real-time question-answer flow like ChatGPT.
+   * Chat scrollable area for conversation history.
+
+

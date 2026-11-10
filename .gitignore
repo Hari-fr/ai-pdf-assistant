@@ -1,0 +1,48 @@
+# Python Virtual Environments
+pdf_env/
+venv/
+env/
+.venv/
+ENV/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Node & Frontend dependencies & build output
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.vite/
+frontend/.vite/
+
+# Database & Runtime generated data
+backend/chroma_store/
+backend/chromadb_data/
+backend/temp/
+*.sqlite3
+
+# Large Binary Installers & Tools (GitHub blocks files > 100MB)
+Tools used/
+poppler-24.08.0/
+*.exe
+*.msi
+*.zip
+
+# Environment & Secret files
+.env
+backend/.env
+.env.local
+.env.*.local
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.log
+
